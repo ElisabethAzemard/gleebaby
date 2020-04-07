@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCaretakersTable extends Migration
+class CreatePractitionerAvailabilitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreateCaretakersTable extends Migration
      */
     public function up()
     {
-        Schema::create('caretakers', function (Blueprint $table) {
+        Schema::create('practitioner_availabilities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->mediumInteger('id_family');
-            $table->char('name', 20);
-            $table->char('last_name', 20);
-            $table->tinyInteger('age');
+
+            $table->date('start_of_subscription');
+            $table->date('end_of_subscription');
 
             // Foreign keys
-            $table->integer('sponsor_id');
-            $table->integer('family_id');
-            $table->integer('caretakerform_id');
+            $table->integer('practitioner_id');
 
             $table->timestamps();
         });
@@ -36,6 +33,6 @@ class CreateCaretakersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('caretakers');
+        Schema::dropIfExists('practitioner_availabilities');
     }
 }
