@@ -19,9 +19,9 @@ class CreateSponsorsTable extends Migration
             $table->char('first_name', 20);
             $table->char('last_name', 20);
             $table->char('email')->unique();
-            $table->char('password', 20);
+            $table->char('password', 20)->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->char('phone_number', 15);
+            $table->char('phone_number', 15)->unique();
 
             $table->rememberToken();
             $table->timestamps();

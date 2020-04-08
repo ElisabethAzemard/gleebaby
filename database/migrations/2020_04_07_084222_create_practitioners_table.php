@@ -19,7 +19,7 @@ class CreatePractitionersTable extends Migration
             $table->char('first_name', 20);
             $table->char('last_name', 20);
             $table->char('email')->unique();
-            $table->char('password', 20);
+            $table->char('password', 20)->unique();
             $table->timestamp('email_verified_at')->nullable();
 
             // Foreign keys

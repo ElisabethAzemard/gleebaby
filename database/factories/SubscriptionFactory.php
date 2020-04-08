@@ -12,7 +12,7 @@ $factory->define(Subscription::class, function (Faker $faker) {
 
     return [
         'start_of_subscription' => $startingDate,
-        'end_of_subscription' => $endingDate,
-        'activation_key' => $faker->randomNumber(20),
+        'end_of_subscription'   => $endingDate,
+        'activation_key'        => $faker->unique()->randomNumber(20),
     ];
 });

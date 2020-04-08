@@ -18,7 +18,7 @@ class CreateCaretakersTable extends Migration
             $table->char('first_name', 20);
             $table->char('last_name', 20);
             $table->char('email')->unique();
-            $table->char('password', 20);
+            $table->char('password', 20)->unique();
             $table->tinyInteger('age');
 
             // Foreign keys
