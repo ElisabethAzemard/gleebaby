@@ -14,8 +14,11 @@ class AppointmentCaretaker extends Migration
     public function up()
     {
         Schema::create('appointment_caretaker', function (Blueprint $table) {
+            $table->bigIncrements('id');
+
             $table->bigInteger('appointment_id');
             $table->bigInteger('caretaker_id');
+
             $table->timestamps();
         });
     }
