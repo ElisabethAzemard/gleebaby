@@ -15,6 +15,9 @@ class CreatePractitionerFormsTable extends Migration
     {
         Schema::create('practitioner_forms', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->char('short_description');
+
             $table->timestamps();
         });
     }
