@@ -16,7 +16,7 @@ class CreateChildrenTable extends Migration
         Schema::create('children', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->char('name', 20);
+            $table->char('first_name', 20);
             $table->date('date_of_birth');
 
             // Foreign keys
