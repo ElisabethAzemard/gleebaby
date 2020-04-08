@@ -26,6 +26,7 @@ class CreateCaretakersTable extends Migration
             $table->integer('family_id');
             $table->integer('caretakerform_id');
 
+            $table->rememberToken();
             $table->timestamps();
         });
     }
