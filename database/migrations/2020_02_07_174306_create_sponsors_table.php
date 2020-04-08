@@ -15,6 +15,15 @@ class CreateSponsorsTable extends Migration
     {
         Schema::create('sponsors', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->char('first_name', 20);
+            $table->char('last_name', 20);
+            $table->char('email')->unique();
+            $table->char('password', 20);
+            $table->timestamp('email_verified_at')->nullable();
+            $table->char('phone_number', 15);
+
+            $table->rememberToken();
             $table->timestamps();
         });
     }
