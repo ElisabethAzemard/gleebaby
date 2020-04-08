@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(CaretakerForm::class, function (Faker $faker) {
     return [
-        //
+        'mood' => $faker->word
     ];
 });

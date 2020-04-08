@@ -15,7 +15,7 @@ class CreateCaretakerFormsTable extends Migration
     {
         Schema::create('caretaker_forms', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('address');
+            $table->string('mood');
             $table->timestamps();
         });
     }
