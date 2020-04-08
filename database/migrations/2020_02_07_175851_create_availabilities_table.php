@@ -15,6 +15,13 @@ class CreateAvailabilitiesTable extends Migration
     {
         Schema::create('availabilities', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->date('start');
+            $table->date('end');
+
+            // Foreign keys
+            $table->integer('practitioner_id');
+
             $table->timestamps();
         });
     }
