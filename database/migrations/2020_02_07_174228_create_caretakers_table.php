@@ -15,9 +15,10 @@ class CreateCaretakersTable extends Migration
     {
         Schema::create('caretakers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->mediumInteger('id_family');
-            $table->char('name', 20);
+            $table->char('first_name', 20);
             $table->char('last_name', 20);
+            $table->char('email')->unique();
+            $table->char('password', 20);
             $table->tinyInteger('age');
 
             // Foreign keys
