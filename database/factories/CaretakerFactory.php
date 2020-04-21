@@ -14,6 +14,6 @@ $factory->define(Caretaker::class, function (Faker $faker) {
         'age'               => $faker->numberBetween(20, 50),
         'sponsor_id'        => App\Sponsor::pluck('id')->random(),
         'family_id'         => App\Family::pluck('id')->random(),
-        'caretakerform_id'  => App\Caretakerform::pluck('id')->random(),
+        'caretakerform_id'  => factory('App\CaretakerForm')->create()->id,
     ];
 });

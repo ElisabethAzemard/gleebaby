@@ -12,7 +12,7 @@ $factory->define(Practitioner::class, function (Faker $faker) {
         'email'                 => $faker->unique()->email,
         'password'              => $faker->unique()->password,
         'email_verified_at'     => $faker->date,
-        'practitionerform_id'   => App\Practitionerform::pluck('id')->random(),
+        'practitionerform_id'   => factory('App\PractitionerForm')->create()->id,
         'remember_token'        => $faker->randomNumber,
     ];
 });

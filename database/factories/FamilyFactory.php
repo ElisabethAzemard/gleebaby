@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(Family::class, function (Faker $faker) {
     return [
-        'subscription_id' => App\Subscription::pluck('id')->random()
+        'subscription_id' => factory('App\Subscription')->create()->id
     ];
 });

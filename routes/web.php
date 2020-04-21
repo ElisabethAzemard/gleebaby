@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// });
+
+// Route::get('/profile', function() {
+//     return view('profile');
+// });
+
+// Route::get('/chat', function() {
+//     return view('chat');
+// });
+
+// Route::get('/feed', function() {
+//     return view('feed');
+// });
+
+// Route::get('/calendar', function() {
+//     return view('calendar');
+// });
