@@ -16,9 +16,6 @@ class DatabaseSeeder extends Seeder
 
         // ----- Create Caretakers -----
         factory(App\Caretaker::class, 25)->create()->each(function ($caretaker) {
-            // create a family for each new caretaker
-            $caretaker->family()->save(factory(App\Family::class)->make());
-
         });
 
         // ----- Create Children -----

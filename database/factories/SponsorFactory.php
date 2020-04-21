@@ -13,6 +13,6 @@ $factory->define(Sponsor::class, function (Faker $faker) {
         'password'          => $faker->unique()->password,
         'email_verified_at' => $faker->date,
         'phone_number'      => $faker->e164PhoneNumber,
-        'remember_token'    => $faker->randomNumber,
+        'remember_token'    => $faker->unique()->randomNumber,
     ];
 });
