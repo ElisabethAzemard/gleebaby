@@ -19,16 +19,16 @@ class DatabaseSeeder extends Seeder
         });
 
         // ----- Create Children -----
-        factory(App\Sponsor::class, 50)->create();
+        factory(App\Sponsor::class, 10)->create();
 
         // ----- Create Practitioners -----
         factory(App\Practitioner::class, 50)->create();
 
         // ----- Create Appointments -----
-        factory(App\Appointment::class, 75)->create();
+        factory(App\Appointment::class, 55)->create();
 
         // ----- Create Availabilities -----
-        factory(App\Availability::class, 150)->create();
+        factory(App\Availability::class, 50)->create();
 
 
 
