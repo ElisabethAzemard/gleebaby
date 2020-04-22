@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ChildController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the children.
      *
      * @return \Illuminate\Http\Response
      */
@@ -18,7 +18,7 @@ class ChildController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new child.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +28,7 @@ class ChildController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created child in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,7 +39,7 @@ class ChildController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified child.
      *
      * @param  \App\Child  $child
      * @return \Illuminate\Http\Response
@@ -50,7 +50,7 @@ class ChildController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified child.
      *
      * @param  \App\Child  $child
      * @return \Illuminate\Http\Response
@@ -61,7 +61,7 @@ class ChildController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified child in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Child  $child
@@ -73,7 +73,7 @@ class ChildController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified child from storage.
      *
      * @param  \App\Child  $child
      * @return \Illuminate\Http\Response

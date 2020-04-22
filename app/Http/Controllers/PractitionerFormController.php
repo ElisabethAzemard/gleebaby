@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PractitionerFormController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the practitioner forms.
      *
      * @return \Illuminate\Http\Response
      */
@@ -18,7 +18,7 @@ class PractitionerFormController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new practitioner form.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +28,7 @@ class PractitionerFormController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created practitioner form in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,7 +39,7 @@ class PractitionerFormController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified practitioner form.
      *
      * @param  \App\PractitionerForm  $practitionerForm
      * @return \Illuminate\Http\Response
@@ -50,7 +50,7 @@ class PractitionerFormController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified practitioner form.
      *
      * @param  \App\PractitionerForm  $practitionerForm
      * @return \Illuminate\Http\Response
@@ -61,7 +61,7 @@ class PractitionerFormController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified practitioner form in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\PractitionerForm  $practitionerForm
@@ -73,7 +73,7 @@ class PractitionerFormController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified practitioner form from storage.
      *
      * @param  \App\PractitionerForm  $practitionerForm
      * @return \Illuminate\Http\Response

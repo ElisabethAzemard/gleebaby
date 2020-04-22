@@ -8,17 +8,7 @@ use Illuminate\Http\Request;
 class CaretakerController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new caretaker.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +18,7 @@ class CaretakerController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created caretaker in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,7 +29,7 @@ class CaretakerController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified caretaker.
      *
      * @param  \App\Caretaker  $caretaker
      * @return \Illuminate\Http\Response
@@ -50,7 +40,7 @@ class CaretakerController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified caretaker.
      *
      * @param  \App\Caretaker  $caretaker
      * @return \Illuminate\Http\Response
@@ -61,7 +51,7 @@ class CaretakerController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified caretaker in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Caretaker  $caretaker
@@ -73,7 +63,7 @@ class CaretakerController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified caretaker from storage.
      *
      * @param  \App\Caretaker  $caretaker
      * @return \Illuminate\Http\Response

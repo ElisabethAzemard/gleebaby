@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CaretakerFormController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the caretaker forms.
      *
      * @return \Illuminate\Http\Response
      */
@@ -18,7 +18,7 @@ class CaretakerFormController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new caretaker form.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +28,7 @@ class CaretakerFormController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created caretaker form in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,7 +39,7 @@ class CaretakerFormController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified caretaker form.
      *
      * @param  \App\CaretakerForm  $caretakerForm
      * @return \Illuminate\Http\Response
@@ -50,7 +50,7 @@ class CaretakerFormController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified caretaker form.
      *
      * @param  \App\CaretakerForm  $caretakerForm
      * @return \Illuminate\Http\Response
@@ -61,7 +61,7 @@ class CaretakerFormController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified caretaker form in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\CaretakerForm  $caretakerForm
@@ -73,7 +73,7 @@ class CaretakerFormController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified caretaker form from storage.
      *
      * @param  \App\CaretakerForm  $caretakerForm
      * @return \Illuminate\Http\Response

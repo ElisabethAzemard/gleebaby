@@ -8,17 +8,27 @@ use Illuminate\Http\Request;
 class AppointmentController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the appointments for a given practitioner.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexPractitioner(Practitioner $practitioner)
     {
         //
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the appointments for a given caretaker.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexCaretaker(Caretaker $carekater)
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new appointment.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +38,7 @@ class AppointmentController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created appointment in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,7 +49,7 @@ class AppointmentController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified appointment.
      *
      * @param  \App\Appointment  $appointment
      * @return \Illuminate\Http\Response
@@ -50,7 +60,7 @@ class AppointmentController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified appointment.
      *
      * @param  \App\Appointment  $appointment
      * @return \Illuminate\Http\Response
@@ -61,7 +71,7 @@ class AppointmentController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified appointment in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Appointment  $appointment
@@ -73,7 +83,7 @@ class AppointmentController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified appointment from storage.
      *
      * @param  \App\Appointment  $appointment
      * @return \Illuminate\Http\Response

@@ -8,17 +8,17 @@ use Illuminate\Http\Request;
 class AvailabilityController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the availability for a given practitioner.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Pracitioner $practitioner)
     {
         //
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new availability.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +28,7 @@ class AvailabilityController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created availability in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,7 +39,7 @@ class AvailabilityController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified availability.
      *
      * @param  \App\Availability  $availability
      * @return \Illuminate\Http\Response
@@ -50,7 +50,7 @@ class AvailabilityController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified availability.
      *
      * @param  \App\Availability  $availability
      * @return \Illuminate\Http\Response
@@ -61,7 +61,7 @@ class AvailabilityController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified availability in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Availability  $availability
@@ -73,7 +73,7 @@ class AvailabilityController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified availability from storage.
      *
      * @param  \App\Availability  $availability
      * @return \Illuminate\Http\Response
