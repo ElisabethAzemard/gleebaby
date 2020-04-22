@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Sponsor;
+use App\Sponsor as Sponsor;
 use Illuminate\Http\Request;
 
 class SponsorController extends Controller
@@ -14,7 +14,8 @@ class SponsorController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.sponsors.index', ['sponsors' => Sponsor::all()]);
+        // $sponsors = Sponsor::all()->get();
     }
 
     /**
@@ -44,9 +45,9 @@ class SponsorController extends Controller
      * @param  \App\Sponsor  $sponsor
      * @return \Illuminate\Http\Response
      */
-    public function show(Sponsor $sponsor)
+    public function show(Sponsor $sponsor, $id)
     {
-        //
+        return view('pages.sponsors.show', ['sponsor' => Sponsor::findOrFail($id)]);
     }
 
     /**

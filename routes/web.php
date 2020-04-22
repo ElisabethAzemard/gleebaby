@@ -11,26 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// });
+Route::get('/', 'HomeController@index');
 
-// Route::get('/profile', function() {
-//     return view('profile');
-// });
+// ----- Collections of Resources -----
+Route::get('sponsors', 'SponsorController@index')->name('sponsors.index');
 
-// Route::get('/chat', function() {
-//     return view('chat');
-// });
+// ----- Get 1 Element from each Resource -----
+Route::get('sponsors/{id}', 'SponsorController@show')->name('sponsors.show');
 
-// Route::get('/feed', function() {
-//     return view('feed');
-// });
+// ----- Individual Users Profiles -----
 
-// Route::get('/calendar', function() {
-//     return view('calendar');
-// });
+// Members of the app
+Route::get('caretakers/{id}', 'CaretakerController@show');
+Route::get('practitioners/{id}', 'PractitionerController@show');
+
+
+// Admin
+// Route::get('users/{id}', 'UserController@show')->name('admin.profile');
+
