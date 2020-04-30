@@ -21,16 +21,9 @@
 </head>
 <body>
     <div id="app">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <aside class="col-12 col-md-2 p-0 bg-light">
-                    @include('partials.nav')
-                </aside>
-                <main class="col-12 col-md-10 py-4 bg-white">
-                    @yield('content')
-                </main>
-            </div>
-        </div>
+        <main class="py-4">
+            @yield('content')
+        </main>
     </div>
 </body>
 </html>

@@ -18,13 +18,13 @@ class CreateCaretakersTable extends Migration
             $table->char('first_name', 20);
             $table->char('last_name', 20);
             $table->char('email')->unique();
-            $table->char('password', 20)->unique();
-            $table->tinyInteger('age');
+            $table->char('password')->unique();
+            $table->tinyInteger('age')->nullable();
 
             // Foreign keys
-            $table->integer('sponsor_id');
-            $table->integer('family_id');
-            $table->integer('caretakerform_id');
+            $table->integer('sponsor_id')->nullable();
+            $table->integer('family_id')->nullable();
+            $table->integer('caretakerform_id')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

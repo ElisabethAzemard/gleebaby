@@ -46,6 +46,18 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'caretaker' => [
+            'driver' => 'session',
+            'provider' => 'caretakers',
+        ],
+        'practitioner' => [
+            'driver' => 'session',
+            'provider' => 'practitioners',
+        ],
+        'sponsor' => [
+            'driver' => 'session',
+            'provider' => 'sponsors',
+        ],
     ],
 
     /*
@@ -70,7 +82,18 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
+        'caretakers' => [
+            'driver' => 'eloquent',
+            'model' => App\Caretaker::class,
+        ],
+        'practitioners' => [
+            'driver' => 'eloquent',
+            'model' => App\Practitioner::class,
+        ],
+        'sponsors' => [
+            'driver' => 'eloquent',
+            'model' => App\Sponsor::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -95,6 +118,24 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'caretakers' => [
+            'provider' => 'caretakers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'practitioners' => [
+            'provider' => 'practitioners',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'sponsors' => [
+            'provider' => 'sponsors',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

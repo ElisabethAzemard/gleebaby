@@ -19,11 +19,11 @@ class CreatePractitionersTable extends Migration
             $table->char('first_name', 20);
             $table->char('last_name', 20);
             $table->char('email')->unique();
-            $table->char('password', 20)->unique();
+            $table->char('password')->unique();
             $table->timestamp('email_verified_at')->nullable();
 
             // Foreign keys
-            $table->integer('practitionerform_id');
+            $table->integer('practitionerform_id')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

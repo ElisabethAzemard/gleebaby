@@ -11,23 +11,62 @@
 |
 */
 
+Route::get('/', 'HomeController@index')->name('home');
+
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+// ----- Custom login routes -----
+Route::prefix('/login')->group(function(){
+    // GET
+    Route::get('/caretaker', 'Auth\LoginController@showCaretakerLoginForm')->name('login.caretaker.show');
+    Route::get('/practitioner', 'Auth\LoginController@showPractitionerLoginForm')->name('login.practitioner.show');
+    Route::get('/sponsor', 'Auth\LoginController@showSponsorLoginForm')->name('login.sponsor.show');
 
-// ----- Collections of Resources -----
-Route::get('sponsors', 'SponsorController@index')->name('sponsors.index');
+    // POST
+    Route::post('/caretaker', 'Auth\LoginController@caretakerLogin')->name('login.caretaker');
+    Route::post('/practitioner', 'Auth\LoginController@practitionerLogin')->name('login.practitioner');
+    Route::post('/sponsor', 'Auth\LoginController@sponsorLogin')->name('login.sponsor');
+});
 
-// ----- Get 1 Element from each Resource -----
-Route::get('sponsors/{id}', 'SponsorController@show')->name('sponsors.show');
+// ----- Custom register routes -----
+Route::prefix('/register')->group(function(){
+    // GET
+    Route::get('/caretaker', 'Auth\RegisterController@showCaretakerRegisterForm')->name('register.caretaker.show');
+    Route::get('/practitioner', 'Auth\RegisterController@showPractitionerRegisterForm')->name('register.practitioner.show');
+    Route::get('/sponsor', 'Auth\RegisterController@showSponsorRegisterForm')->name('register.sponsor.show');
 
-// ----- Individual Users Profiles -----
+    // POST
+    Route::post('/caretaker', 'Auth\RegisterController@createCaretaker')->name('register.caretaker');
+    Route::post('/practitioner', 'Auth\RegisterController@createPractitioner')->name('register.practitioner');
+    Route::post('/sponsor', 'Auth\RegisterController@createSponsor')->name('register.sponsor');
+});
 
-// Members of the app
+// ----- Admin Routes -----
+Route::middleware('auth')->group(function(){
+    Route::view('/admin', 'admin')->name('admin.home');
+});
+
+// ----- Caretakers Routes -----
+Route::middleware('auth:caretaker')->group(function(){
+    Route::view('/caretaker', 'caretaker', ['url' => 'caretaker'])->name('caretaker.home');
+});
+
+// ----- Practitioners Routes -----
+Route::middleware('auth:practitioner')->group(function(){
+    Route::view('/practitioner', 'practitioner', ['url' => 'practitioner'])->name('practitioner.home');
+});
+
+// ----- Sponsors Routes -----
+Route::middleware('auth:sponsor')->group(function(){
+    Route::view('', 'sponsor', ['url' => 'sponsor'])->name('sponsor.home');
+});
+
+// ----- Resources Routes -----
+Route::prefix('/sponsors')->group(function(){
+    Route::get('', 'SponsorController@index')->name('sponsors.index');
+    Route::get('sponsors/{id}', 'SponsorController@show')->name('sponsors.show');
+});
+
+// ----- Public Profiles -----
 Route::get('caretakers/{id}', 'CaretakerController@show');
 Route::get('practitioners/{id}', 'PractitionerController@show');
-
-
-// Admin
-// Route::get('users/{id}', 'UserController@show')->name('admin.profile');
-
