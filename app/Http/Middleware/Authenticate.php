@@ -28,6 +28,10 @@ class Authenticate extends Middleware
                 return route('login.sponsor.show', ['url' => 'sponsor']);
             }
 
+            if( $request->is('admin') ) {
+                return route('login', ['url' => 'admin']);
+            }
+
             return route('login');
 
         }

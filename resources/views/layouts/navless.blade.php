@@ -20,10 +20,23 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <main class="py-4">
-            @yield('content')
-        </main>
+    <div id="app" class="mh-100">
+        <div class="container-fluid mh-100">
+            <div class="row mh-100" id="a">
+                <aside class="col-12 col-md-2 p-0 bg-light shadow-right z-index-small">
+                    @include('partials.nav')
+                </aside>
+                <main class="col-12 col-md-10 p-0 bg-white">
+                    <div class="mh-100">
+                        <div class="row justify-content-center mh-100 no-gutters">
+                            <div class="col">
+                                @yield('content')
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
     </div>
 </body>
 </html>

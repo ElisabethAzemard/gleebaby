@@ -1,0 +1,27 @@
+// ----- THEME COLORS -----
+$primary: #79bbba;
+$secondary: #8ed1eb;
+$success: #8fd482;
+$danger: #f55b5d;
+$dark: #5a5a5a;
+$white: #fff;
+$enable-shadows: true;
+$font-family-sans-serif: 'Nunito', sans-serif;
+$body-font-family: 'Nunito', sans-serif;
+
+// CARDS --> replace with .bg-transparent on cards with footer
+$card-cap-bg: $white;
+$card-border-color: $white;
+
+$z-map: (
+    'tiny': 1,
+    'small': 10,
+    'medium': 100,
+    'large': 1000
+);
+
+@each $z-name, $z-value in $z-map {
+  .z-index-#{$z-name} {
+    z-index: $z-value;
+  }
+}

@@ -1,0 +1,12 @@
+.mh-100 {
+    min-height: 100vh;
+}
+
+
+.shadow-left-inset {
+    box-shadow: inset 8px 0 10px -6px black;
+}
+
+.shadow-right {
+    box-shadow: 6px 0 15px -15px $dark;
+}

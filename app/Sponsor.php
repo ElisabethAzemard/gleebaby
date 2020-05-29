@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Musonza\Chat\Traits\Messageable;
 
 class Sponsor extends Authenticatable
 {
     use Notifiable;
+    use Messageable;
 
     protected $guard = "sponsor";
 
@@ -43,4 +45,13 @@ class Sponsor extends Authenticatable
     {
         return $this->hasMany('App\Caretaker');
     }
+
+    public function getParticipantDetailsAttribute()
+    {
+        return [
+            'firstName' => $this->first_name,
+            'lastName' => $this->last_name
+        ];
+    }
+
 }

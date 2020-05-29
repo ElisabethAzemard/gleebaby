@@ -1,10 +1,10 @@
-@extends('layouts.navless')
+@extends('layouts.login')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h1 class="text-center h3 my-3">{{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</h1>
+            <h1 class="text-center h3 my-3">{{ __('Connexion') }}</h1>
                 @isset($url)
                 <form method="POST" action='{{ url("login/$url") }}' aria-label="{{ __('Login') }}">
                 @else
@@ -41,7 +41,7 @@
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                             <label class="form-check-label" for="remember">
-                                {{ __('Remember Me') }}
+                                {{ __('Rester connecté') }}
                             </label>
                         </div>
                     </div>

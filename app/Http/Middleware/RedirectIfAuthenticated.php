@@ -30,6 +30,13 @@ class RedirectIfAuthenticated
             return redirect()->route("sponsor.home", ['url' => 'sponsor']);
         }
 
+        // var_dump($guard);
+        // die;
+
+        if ($guard == "web" && Auth::guard($guard)->check()){
+            return redirect()->route("admin.home", ['url' => 'admin']);
+        }
+
         if (Auth::guard($guard)->check()) {
             return redirect(RouteServiceProvider::HOME);
         }

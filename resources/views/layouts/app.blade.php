@@ -20,14 +20,25 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <aside class="col-12 col-md-2 p-0 bg-light">
+    <div id="app" class="mh-100">
+        <div class="container-fluid mh-100">
+            <div class="row mh-100" id="a">
+                <aside class="col-12 col-md-2 p-0 bg-light shadow-right z-index-small">
                     @include('partials.nav')
                 </aside>
-                <main class="col-12 col-md-10 py-4 bg-white">
-                    @yield('content')
+                <main class="col-12 col-md-10 p-0 bg-white">
+                    <div class="container mh-100">
+                        <div class="row justify-content-center mh-100">
+                            <div class="col-12 col-md-3 d-flex flex-column align-items-center justify-content-center shadow-right px-5 py-5">
+                                <img src="{{asset('/img/users-avatar').'/'.$caretaker->avatar}}" alt="avatar" width="75" class="rounded-circle">
+                                <h2 class="h2 text-center py-4">{{ $pageTitle ?? 'Titre' }}</h2>
+                                <p class="text-center">{{ $pageDescription ?? 'Description de page.' }}</p>
+                            </div>
+                            <div class="col py-5">
+                                @yield('content')
+                            </div>
+                        </div>
+                    </div>
                 </main>
             </div>
         </div>

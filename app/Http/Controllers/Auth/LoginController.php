@@ -152,7 +152,7 @@ class LoginController extends Controller
             return redirect()->route('login.sponsor.show', ['url' => 'sponsor']);
         }
 
-        return redirect('/login');
+        return redirect('/login/caretaker');
       }
 
 }

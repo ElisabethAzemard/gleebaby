@@ -66,7 +66,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Show Caretaker registration form
+     * Show Admin registration form
      */
     public function showRegistrationForm()
     {

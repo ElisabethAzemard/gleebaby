@@ -20,6 +20,7 @@ class CreateCaretakersTable extends Migration
             $table->char('email')->unique();
             $table->char('password')->unique();
             $table->tinyInteger('age')->nullable();
+            $table->char('avatar')->default('caretaker_avatar.jpg');;
 
             // Foreign keys
             $table->integer('sponsor_id')->nullable();

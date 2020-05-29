@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Sponsor as Sponsor;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Auth;
 
 class SponsorController extends Controller
 {
@@ -45,9 +46,17 @@ class SponsorController extends Controller
      * @param  \App\Sponsor  $sponsor
      * @return \Illuminate\Http\Response
      */
-    public function show(Sponsor $sponsor, $id)
+    public function show($id)
     {
-        return view('pages.sponsors.show', ['sponsor' => Sponsor::findOrFail($id)]);
+        $caretaker = \Auth::user();
+        // var_dump($caretaker);
+        // die();
+        // $id = \Auth::user()->id;
+        return view('pages.sponsors.show', [
+            'sponsor' => Sponsor::findOrFail($id),
+            'caretaker' => $caretaker,
+            'url' => 'caretaker'
+        ]);
     }
 
     /**
